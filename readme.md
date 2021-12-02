@@ -15,7 +15,8 @@ If you want credit during the incentivized testnet period, you'll need to sign u
 
 * Visit: https://testnet.ironfish.network/about
   * Go to "sign up"
-  * When creating account, use the same "graffiti" from config:set above
+  * Make up a "graffiti" string which is sort of like a public user name
+  * Save the graffiti string and use it in the "config:set blockGraffiti" noted in the section below
 
 
 ### 2. Set up (a node and a miner)
@@ -28,7 +29,7 @@ If you want credit during the incentivized testnet period, you'll need to sign u
 # run ad hoc commands, including setting some important config
 > source ./source-me.sh
 > ironfish config:set nodeName "some-name-here"
-> ironfish config:set blockGraffiti "some-unique-graffiti-here"
+> ironfish config:set blockGraffiti "unique-graffiti-string-from-signup-here"
 
 # restart after config change
 > docker compose restart
