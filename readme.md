@@ -11,7 +11,8 @@ References:
 * https://github.com/iron-fish/ironfish/blob/master/ironfish-cli/Dockerfile
 
 
-# tldr :: fast setup :: incentivized testnet + mining + docker
+
+# TLDR :: incentivized testnet + mining + docker
 
 This approach assumes you have docker and a shell, and know at least a little
 bit about how to use them (os x, linux, etc).
@@ -31,11 +32,11 @@ bit about how to use them (os x, linux, etc).
 > docker compose logs -f
 ```
 
-### Sign up for the incentivized testnet
+### Sign up
 
 * Visit: https://testnet.ironfish.network/about
-** Go to "sign up"
-** When creating account, use the same "graffiti" from config:set above
+  * Go to "sign up"
+  * When creating account, use the same "graffiti" from config:set above
 
 
 ### Misc pro tips
@@ -59,7 +60,8 @@ bit about how to use them (os x, linux, etc).
 
 
 
-# Getting started with a node and mining via docker - longer version
+
+# Getting started - longer version
 
 
 ```
@@ -114,7 +116,10 @@ bit about how to use them (os x, linux, etc).
 ```
 
 
-# Quick Reference
+
+
+
+# Misc Reference
 
 
 ### ironfish cli via docker - for ad hoc ironfish cli commands
@@ -152,8 +157,7 @@ bit about how to use them (os x, linux, etc).
 ```
 
 
-
-# Misc notes
+### misc notes
 
 ```
 # Full docker command for status without alias
