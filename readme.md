@@ -2,30 +2,35 @@
 # iron-fish utils
 
 
-References:
-* Discord: https://discord.gg/EkQkEcm8DH
-* https://ironfish.network/
-* https://testnet.ironfish.network/about
-* https://ironfish.network/docs/onboarding/iron-fish-tutorial
-* https://github.com/iron-fish/ironfish
-* https://github.com/iron-fish/ironfish/blob/master/ironfish-cli/Dockerfile
-
-
-
 ## TLDR :: incentivized testnet + mining + docker
 
-This approach assumes you have docker and a shell, and know at least a little
-bit about how to use them (os x, linux, etc).
+This quick start approach assumes:
+* you are running linux or os x
+* you have docker and basic command line experience
 
 
-### 1. Setup
+### 1. Sign up
+
+If you want credit during the incentivized testnet period, you'll need to sign up.
+
+* Visit: https://testnet.ironfish.network/about
+  * Go to "sign up"
+  * When creating account, use the same "graffiti" from config:set above
+
+
+### 2. Set up (a node and a miner)
 
 ```
+# start the node and the miner
 > docker pull ghcr.io/iron-fish/ironfish:latest
 > docker compose up -d
+
+# run ad hoc commands, including setting some important config
 > source ./source-me.sh
 > ironfish config:set nodeName "some-name-here"
 > ironfish config:set blockGraffiti "some-unique-graffiti-here"
+
+# restart after config change
 > docker compose restart
 
 # watch logs as desired:
@@ -33,18 +38,11 @@ bit about how to use them (os x, linux, etc).
 ```
 
 
-### 2. Sign up
-
-* Visit: https://testnet.ironfish.network/about
-  * Go to "sign up"
-  * When creating account, use the same "graffiti" from config:set above
-
-
 ### 3. Misc pro tips
 
-* Join the discord
-* Occasionally restart because there are known memory leaks
-* Edit the thread count in the docker compose file
+* Join the discord @ https://discord.gg/EkQkEcm8DH
+* Occasionally restart the containers because there are known memory leaks
+* Edit the thread count in the docker compose file based on your core count
 * Don't run too many threads vs cores or contention will slow down mining
 
 
@@ -52,7 +50,7 @@ bit about how to use them (os x, linux, etc).
 # Occasionally restart
 > docker compose restart
 
-# New Release?
+# New Release announced?
 > docker pull ghcr.io/iron-fish/ironfish:latest
 > docker compose down
 > docker compose up -d
@@ -60,62 +58,16 @@ bit about how to use them (os x, linux, etc).
 ```
 
 
+### 4. Docs & References
 
+Tons more information can be found in the official docs, discord, etc
 
-## Getting started - longer version
-
-
-```
-#
-# Just starting?
-#
-# 1. Start the main node for the first time
-#    a. At first start, config will be initialized and account will be created
-#    b. Watch and wait for the chain to sync (ranges from minutes to days depending on chain length)
-#
-
-# start the main node
-> docker compose up iron-fish -d
-
-# check and/or follow the logs
-> docker compose logs -f
-> docker compose logs --tail 30
-
-
-#
-# 2. While waiting for the initial sync...
-#
-#  . explore the docs 
-#  . explore the cli command (start with help)
-#  . try out different ironfish status and info commands
-#  . check out peers and workers with ironfish cli commands
-#
-#  . check out the config settings if you want to name your node etc
-#  . stop and start the node and update config as desired, and it will pick back up with sync
-#
-
-> source ./source-me.sh
-> ironfish status
-> ironfish help
-
-# Set your node name and graffiti
-> ironfish config:set nodeName "some-name-here"
-> ironfish config:set blockGraffiti "some-unique-graffiti-here"
-
-# Sign up for the incentivized testnet and use your same graffiti
+* Discord: https://discord.gg/EkQkEcm8DH
+* https://ironfish.network/
 * https://testnet.ironfish.network/about
-
-
-#
-# 3. Fully synced? Start the miner process:
-#
-
-> docker compose up iron-fish-miner -d
-> source ./source-me.sh
-> ironfish status
-
-```
-
+* https://ironfish.network/docs/onboarding/iron-fish-tutorial
+* https://github.com/iron-fish/ironfish
+* https://github.com/iron-fish/ironfish/blob/master/ironfish-cli/Dockerfile
 
 
 
@@ -129,6 +81,10 @@ bit about how to use them (os x, linux, etc).
 > source ./source-me.sh
 > ironfish help
 > ironfish status
+> ironfish status -f
+> ironfish accounts:balance
+> ironfish accounts:export
+...
 ```
 
 
@@ -158,7 +114,7 @@ bit about how to use them (os x, linux, etc).
 ```
 
 
-### misc notes
+### notes from the docs
 
 ```
 # Full docker command for status without alias
