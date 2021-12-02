@@ -11,13 +11,13 @@ References:
 * https://github.com/iron-fish/ironfish/blob/master/ironfish-cli/Dockerfile
 
 
-## tldr :: fast setup :: incentivized testnet + mining + docker
+# tldr :: fast setup :: incentivized testnet + mining + docker
 
 This approach assumes you have docker and a shell, and know at least a little
 bit about how to use them (os x, linux, etc).
 
 
-#### Setup
+### Setup
 
 ```
 > docker pull ghcr.io/iron-fish/ironfish:latest
@@ -31,14 +31,14 @@ bit about how to use them (os x, linux, etc).
 > docker compose logs -f
 ```
 
-#### Sign up for the incentivized testnet
+### Sign up for the incentivized testnet
 
 * Visit: https://testnet.ironfish.network/about
 ** Go to "sign up"
 ** When creating account, use the same "graffiti" from config:set above
 
 
-#### Misc pro tips
+### Misc pro tips
 
 * Join the discord
 * Occasionally restart because there are known memory leaks
@@ -59,7 +59,7 @@ bit about how to use them (os x, linux, etc).
 
 
 
-## Getting started with a node and mining via docker - longer version
+# Getting started with a node and mining via docker - longer version
 
 
 ```
@@ -114,10 +114,10 @@ bit about how to use them (os x, linux, etc).
 ```
 
 
-## Quick Reference
+# Quick Reference
 
 
-#### ironfish cli via docker - for ad hoc ironfish cli commands
+### ironfish cli via docker - for ad hoc ironfish cli commands
 
 ```
 > source ./source-me.sh
@@ -126,7 +126,7 @@ bit about how to use them (os x, linux, etc).
 ```
 
 
-#### general node control via docker compose
+### general node control via docker compose
 
 ```
 # Get the latest image
@@ -153,7 +153,7 @@ bit about how to use them (os x, linux, etc).
 
 
 
-## Misc notes
+# Misc notes
 
 ```
 # Full docker command for status without alias
