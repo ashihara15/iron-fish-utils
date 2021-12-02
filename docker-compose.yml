@@ -1,0 +1,34 @@
+version: '3.3'
+services:
+
+    # main node
+    iron-fish:
+        container_name: iron-fish-1
+        network_mode: host
+        volumes:
+            - '$HOME/.ironfish:/root/.ironfish'
+        image: 'ghcr.io/iron-fish/ironfish:latest'
+
+    # miner(s)
+    iron-fish-miner-1:
+        container_name: iron-fish-miner-1
+        depends_on:
+            - iron-fish
+        network_mode: host
+        volumes:
+            - '$HOME/.ironfish:/root/.ironfish'
+        image: 'ghcr.io/iron-fish/ironfish:latest'
+        command: "miners:start --threads 2"
+
+
+#
+# References:
+#
+# WORKDIR /usr/src/app
+# ENTRYPOINT ["./entrypoint.sh"]
+# CMD ["start", "--rpc.ipc", "--rpc.tcp"]
+#
+# > docker run --rm --tty --interactive --network host --volume $HOME/.ironfish:/root/.ironfish ghcr.io/iron-fish/ironfish:latest
+# > docker run --rm --tty --interactive --network host --volume $HOME/.ironfish:/root/.ironfish ghcr.io/iron-fish/ironfish:latest help
+#
+
