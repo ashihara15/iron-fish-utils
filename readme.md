@@ -18,7 +18,7 @@ This approach assumes you have docker and a shell, and know at least a little
 bit about how to use them (os x, linux, etc).
 
 
-### Setup
+### 1. Setup
 
 ```
 > docker pull ghcr.io/iron-fish/ironfish:latest
@@ -32,14 +32,15 @@ bit about how to use them (os x, linux, etc).
 > docker compose logs -f
 ```
 
-### Sign up
+
+### 2. Sign up
 
 * Visit: https://testnet.ironfish.network/about
   * Go to "sign up"
   * When creating account, use the same "graffiti" from config:set above
 
 
-### Misc pro tips
+### 3. Misc pro tips
 
 * Join the discord
 * Occasionally restart because there are known memory leaks
