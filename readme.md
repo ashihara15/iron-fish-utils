@@ -12,7 +12,7 @@ References:
 
 
 
-# TLDR :: incentivized testnet + mining + docker
+## TLDR :: incentivized testnet + mining + docker
 
 This approach assumes you have docker and a shell, and know at least a little
 bit about how to use them (os x, linux, etc).
@@ -62,7 +62,7 @@ bit about how to use them (os x, linux, etc).
 
 
 
-# Getting started - longer version
+## Getting started - longer version
 
 
 ```
@@ -120,7 +120,7 @@ bit about how to use them (os x, linux, etc).
 
 
 
-# Misc Reference
+## Misc Reference
 
 
 ### ironfish cli via docker - for ad hoc ironfish cli commands
