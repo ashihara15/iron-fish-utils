@@ -35,13 +35,13 @@ can be seen in the main readme.
 
 Run main node & local miner (on the main node host):
 ```
-> docker compose iron-fish iron-fish-miner up
+> docker compose up iron-fish iron-fish-miner
 ```
 
 
 Run remote miner (on each remote host):
 ```
-> docker compose iron-fish-miner-remote up
+> docker compose up iron-fish-miner-remote
 ```
 
 
