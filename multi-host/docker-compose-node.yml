@@ -1,0 +1,13 @@
+version: '3.3'
+services:
+
+    # main node - supports a local miner or a remote miner
+    iron-fish:
+        container_name: iron-fish-1
+        network_mode: host
+        volumes:
+            - '$HOME/.ironfish:/root/.ironfish'
+        image: 'ghcr.io/iron-fish/ironfish:latest'
+        command: "start --rpc.ipc --rpc.tcp --rpc.tcp.host=0.0.0.0 --rpc.tcp.port=9001"
+
+

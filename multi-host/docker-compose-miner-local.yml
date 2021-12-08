@@ -1,0 +1,15 @@
+version: '3.3'
+services:
+
+    # local miner (ipc?)
+    iron-fish-miner:
+        container_name: iron-fish-miner
+        depends_on:
+            - iron-fish
+        network_mode: host
+        volumes:
+            - '$HOME/.ironfish:/root/.ironfish'
+        image: 'ghcr.io/iron-fish/ironfish:latest'
+        command: "miners:start --threads -1"
+
+
