@@ -3,7 +3,7 @@ services:
 
     # main node - supports a local miner or a remote miner
     iron-fish:
-        container_name: iron-fish-1
+        container_name: iron-fish
         network_mode: host
         volumes:
             - '$HOME/.ironfish:/root/.ironfish'
