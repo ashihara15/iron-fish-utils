@@ -3,23 +3,22 @@ services:
 
     # main node
     iron-fish:
-        container_name: iron-fish-1
+        container_name: iron-fish
         network_mode: host
         volumes:
             - '$HOME/.ironfish:/root/.ironfish'
         image: 'ghcr.io/iron-fish/ironfish:latest'
 
-    # miner(s)
-    iron-fish-miner-1:
-        container_name: iron-fish-miner-1
+    # miner
+    iron-fish-miner:
+        container_name: iron-fish-miner
         depends_on:
             - iron-fish
         network_mode: host
         volumes:
             - '$HOME/.ironfish:/root/.ironfish'
         image: 'ghcr.io/iron-fish/ironfish:latest'
-        command: "miners:start --threads 2"
-
+        command: "miners:start --threads -1"
 
 #
 # References:
