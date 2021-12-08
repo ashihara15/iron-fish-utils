@@ -1,13 +1,17 @@
 
 
+### Caution
+
+These notes are more of a quick reference for those familiar with docker.
+
+It is assumed that the main node and account are already setup, including 
+signing up for the testnet, setting graffiti, etc.  
+
+Maybe you've been running a single node, and now you want to switch to a
+multi-node mining arrangement? The quick reference & skeleton for that is below.
+
+
 ### Initial Setup - sync the account + graffiti
-
-These notes assume the main node and account are already setup, including 
-signing up for the testnet, setting graffiti, etc.  Maybe you've been running
-a single node, and now you want to switch to a multi-node mining arrangement?  
-
-More setup detail is beyond the scope of these notes.
-
 
 ```
 # main node
@@ -24,20 +28,20 @@ More setup detail is beyond the scope of these notes.
 
 ### Run the programs
 
-Just a quick note on startup.  Most folks will want to add `-d` for detatching
-and running the containers in the background.  More docker references can be
-seen in the main readme.
+Below is just a quick note on startup.  Most folks will want to add `-d` for
+detatching and running the containers in the background.  More docker references
+can be seen in the main readme.
 
 
 Run main node & local miner (on the main node host):
 ```
-> docker compose -f docker-compose-node.yml -f docker-compose-miner-local.yml up
+> docker compose iron-fish iron-fish-miner up
 ```
 
 
 Run remote miner (on each remote host):
 ```
-> docker compose -f docker-compose-miner-remote.yml up
+> docker compose iron-fish-miner-remote up
 ```
 
 
