@@ -44,7 +44,6 @@ If you want credit during the incentivized testnet period, you'll need to sign u
 > docker compose logs -f
 ```
 
-
 ### 3. Misc pro tips
 
 * Join the discord @ https://discord.gg/EkQkEcm8DH
