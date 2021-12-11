@@ -2,7 +2,7 @@
 # iron-fish utils
 
 
-## TLDR :: incentivized testnet + mining + docker
+## TLDR :: incentivized testnet + mining + docker compose
 
 This quick start approach assumes:
 * you are running linux or os x
