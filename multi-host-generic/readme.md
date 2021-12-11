@@ -20,7 +20,10 @@ changes required:
 # run the node:
 ironfish start --rpc.ipc --rpc.tcp --rpc.tcp.host=192.168.3.8 --rpc.tcp.port=8001
 
-# run a miner:
+# run a local miner (ipc):
+ironfish miners:start --threads 12
+
+# run a remote miner (tcp):
 ironfish miners:start --threads -1 --rpc.tcp --rpc.tcp.host=192.168.3.8 --rpc.tcp.port=8001
 ```
 
