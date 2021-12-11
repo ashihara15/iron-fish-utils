@@ -13,7 +13,7 @@ reminders:
 changes required:
 
 * change "ironfish" command to match your install type (ex: yarn start, docker run -it ..., etc)
-* change the ip address in the examples to the address of your main node (see: 192.168.111.2)
+* change the ip address in the examples to the address of your main node (see: 192.168.3.8)
 
 
 ```
