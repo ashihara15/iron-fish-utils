@@ -9,7 +9,7 @@ The notes and utils here are generally applicable if:
 
 
 
-## TLDR :: incentivized testnet + mining + docker compose
+## A) TLDR :: incentivized testnet + mining + docker compose
 
 A quick start for getting up and running on the incentivized testnet with
 a single computer.
@@ -44,7 +44,12 @@ If you want credit during the incentivized testnet period, you'll need to sign u
 > docker compose logs -f
 ```
 
-### 3. Misc pro tips
+
+
+## B) Misc References and help
+
+
+### pro tips
 
 * Join the discord @ https://discord.gg/EkQkEcm8DH
 * Edit the thread count in the docker compose file based on your core count
@@ -60,7 +65,7 @@ If you want credit during the incentivized testnet period, you'll need to sign u
 ```
 
 
-### 4. Docs & References
+### documentation & references
 
 Tons more information can be found in the official docs, discord, etc
 
@@ -72,12 +77,7 @@ Tons more information can be found in the official docs, discord, etc
 * https://github.com/iron-fish/ironfish/blob/master/ironfish-cli/Dockerfile
 
 
-
-
-## Misc Reference
-
-
-### ironfish cli via docker - for ad hoc ironfish cli commands
+### ad hoc ironfish cli commands (using docker + source-me.sh)
 
 ```
 > source ./source-me.sh
