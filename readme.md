@@ -1,12 +1,18 @@
 
 # iron-fish utils
 
+The notes and utils here are generally applicable if:
+
+* you are running linux or os x
+* you have docker and basic command line experience
+* you are ok using docker compose for orchestration
+
+
 
 ## TLDR :: incentivized testnet + mining + docker compose
 
-This quick start approach assumes:
-* you are running linux or os x
-* you have docker and basic command line experience
+A quick start for getting up and running on the incentivized testnet with
+a single computer.
 
 
 ### 1. Sign up
@@ -42,15 +48,11 @@ If you want credit during the incentivized testnet period, you'll need to sign u
 ### 3. Misc pro tips
 
 * Join the discord @ https://discord.gg/EkQkEcm8DH
-* Occasionally restart the containers because there are known memory leaks
 * Edit the thread count in the docker compose file based on your core count
 * Don't run too many threads vs cores or contention will slow down mining
 
 
 ```
-# Occasionally restart
-> docker compose restart
-
 # New Release announced?
 > docker pull ghcr.io/iron-fish/ironfish:latest
 > docker compose down
