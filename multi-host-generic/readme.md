@@ -4,11 +4,12 @@
 
 reminders:
 
+* Don't run the node or miner on a public ip with the tcp port open to the world
 * all miners need to be able to access the node ip and port (all on same network is easiest)
 * windows? make sure windows firewall isn't blocking inbound traffic for tcp on port 8001 on the node
 * windows? docker host mode networking doesn't work so use "-p 8001:8001" instead of "--network host"
-* set thread counts however you like.  maybe run max-1 on main node, to allow one core for node (vs miner)
 * have same account and config setup on each host
+* Be wary of the -1 threads and tune it to fit your setup
 
 
 changes required:

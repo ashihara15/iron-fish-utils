@@ -10,6 +10,8 @@ signing up for the testnet, setting graffiti, etc.
 Maybe you've been running a single node, and now you want to switch to a
 multi-node mining arrangement? The quick reference & skeleton for that is below.
 
+Warning: Don't run these on a public ip with the rpc tcp port open to the world
+
 
 ### Initial Setup - sync the account + graffiti
 
